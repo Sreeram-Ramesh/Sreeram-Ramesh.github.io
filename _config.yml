@@ -1,0 +1,5 @@
+title: ElectroDocs
+theme: minima
+description: Electronic-themed docs site powered by Jekyll
+markdown: kramdown
+baseurl: ""

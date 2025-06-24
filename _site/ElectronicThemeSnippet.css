@@ -1,0 +1,39 @@
+body {
+  background: #141e30;
+  color: #2de2e6;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff200;
+  text-shadow: 0 0 8px #2de2e6, 0 0 4px #fff200;
+  border-bottom: 1px solid #2de2e6;
+}
+
+blockquote {
+  border-left: 4px solid #fff200;
+  background: #232526;
+  color: #2de2e6;
+  font-style: italic;
+}
+
+code, pre {
+  background: #232526;
+  color: #ff00c8;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+}
+
+ul, ol {
+  color: #9ef01a;
+}
+
+a {
+  color: #fff200;
+  text-decoration: underline wavy #2de2e6;
+}
+
+.markdown-preview-view hr {
+  border-color: #2de2e6;
+  opacity: 0.5;
+}

@@ -1,0 +1,121 @@
+/* Retro computing, terminal style */
+
+body {
+  margin: 0;
+  font-family: 'VT323', 'Press Start 2P', 'Fira Mono', 'Consolas', monospace;
+  background: #181c18;
+  color: #19ff19;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.sidebar {
+  position: fixed;
+  width: 260px;
+  height: 100%;
+  background: #111;
+  border-right: 4px double #19ff19;
+  box-shadow: 0 0 12px #222;
+  padding: 32px 16px 16px 16px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.sidebar h1 {
+  font-family: 'Press Start 2P', 'VT323', monospace;
+  text-transform: uppercase;
+  color: #19ff19;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0.4em 0;
+  background: #191919;
+  border: 2px solid #19ff19;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  letter-spacing: 2px;
+  box-shadow: 0 0 6px #19ff1944;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav li {
+  margin-bottom: 1.5em;
+}
+
+.sidebar nav a {
+  color: #19ff19;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1em;
+  padding: 3px 8px;
+  border-left: 4px solid transparent;
+  transition: background 0.15s, border-left 0.15s;
+  display: block;
+  border-radius: 2px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a:focus {
+  background: #222;
+  border-left: 4px solid #19ff19;
+  color: #fff;
+}
+
+.main-content {
+  margin-left: 280px;
+  padding: 48px 32px;
+  max-width: 780px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', 'VT323', monospace;
+  color: #19ff19;
+  background: #111;
+  padding: 6px 10px;
+  border-left: 6px solid #19ff19;
+  margin-top: 2.2em;
+  margin-bottom: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+a {
+  color: #19ff19;
+  text-decoration: underline dashed #19ff19;
+}
+
+pre, code {
+  background: #222;
+  color: #19ff19;
+  border-radius: 2px;
+  padding: 0.2em 0.4em;
+  font-size: 1.02em;
+  font-family: 'Fira Mono', monospace;
+}
+
+blockquote {
+  border-left: 4px double #19ff19;
+  background: #191919;
+  color: #19ff19;
+  margin: 1em 0;
+  padding: 0.8em 1.2em;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    box-shadow: none;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 20px 8px;
+  }
+}

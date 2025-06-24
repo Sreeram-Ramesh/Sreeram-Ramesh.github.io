@@ -1,0 +1,7 @@
+- name: "Smart Oscilloscope Logger"
+  url: "/projects/smart-oscilloscope-logger.html"
+  year: 2025
+- name: "DIY Solder Fume Extractor"
+  url: "/projects/diy-solder-fume-extractor.html"
+  year: 2024
+# ...add more projects- name: "Smart Oscilloscope Logger"
