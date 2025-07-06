@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-28T18:23:17+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">ElectroDocs</title><subtitle>Electronic-themed docs site powered by Jekyll</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/06/22/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-06-22T15:24:45+05:30</published><updated>2025-06-22T15:24:45+05:30</updated><id>http://localhost:4000/jekyll/update/2025/06/22/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/06/22/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-06T17:24:45+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">ElectroDocs</title><subtitle>Electronic-themed docs site powered by Jekyll</subtitle><entry><title type="html">A Gentle Introduction to Semiconductor Physics</title><link href="http://localhost:4000/2025/07/06/semiconductor-physics.html" rel="alternate" type="text/html" title="A Gentle Introduction to Semiconductor Physics" /><published>2025-07-06T00:00:00+05:30</published><updated>2025-07-06T00:00:00+05:30</updated><id>http://localhost:4000/2025/07/06/semiconductor-physics</id><content type="html" xml:base="http://localhost:4000/2025/07/06/semiconductor-physics.html"><![CDATA[<p>Semiconductor physics is a foundational pillar of modern electronics. Semiconductors are materials whose electrical conductivity lies between that of conductors (like copper) and insulators (like glass).</p>
+
+<h2 id="what-makes-a-material-a-semiconductor">What Makes a Material a Semiconductor?</h2>
+
+<p>A semiconductor, such as silicon, has a unique band structure. At absolute zero, its valence band is full, and the conduction band is empty. However, the energy gap (band gap) between them is small enough that thermal energy at room temperature can excite electrons from the valence band into the conduction band, allowing electricity to flow.</p>
+
+<h2 id="intrinsic-and-extrinsic-semiconductors">Intrinsic and Extrinsic Semiconductors</h2>
+
+<ul>
+  <li><strong>Intrinsic semiconductors</strong> are pure materials like silicon or germanium.</li>
+  <li><strong>Extrinsic semiconductors</strong> are doped with other atoms to increase conductivity:
+    <ul>
+      <li><strong>N-type:</strong> More electrons (negative charge carriers) are introduced.</li>
+      <li><strong>P-type:</strong> More holes (positive charge carriers) are introduced.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="applications">Applications</h2>
+
+<p>Semiconductors are used to make diodes, transistors, solar cells, and integrated circuits—the building blocks of computers and modern electronic devices.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Understanding semiconductor physics allows us to engineer the electronic world around us, from smartphones to solar panels.</p>
+
+<p><em>Happy learning!</em></p>]]></content><author><name></name></author><category term="research" /><category term="physics" /><summary type="html"><![CDATA[Semiconductor physics is a foundational pillar of modern electronics. Semiconductors are materials whose electrical conductivity lies between that of conductors (like copper) and insulators (like glass).]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/06/22/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-06-22T15:24:45+05:30</published><updated>2025-06-22T15:24:45+05:30</updated><id>http://localhost:4000/jekyll/update/2025/06/22/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/06/22/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 

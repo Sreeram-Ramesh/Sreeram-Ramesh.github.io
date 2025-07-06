@@ -1,4 +1,3 @@
-
 html, body {
   margin: 0;
   padding: 0;
@@ -35,6 +34,7 @@ body {
   flex-direction: column;
   align-items: center;    /* Horizontal centering only */
   box-sizing: border-box;
+  z-index: 100;
 }
 
 .sidebar h1 {
@@ -47,8 +47,21 @@ body {
   padding-bottom: 0.4em;
   margin: 0 0 1.2em 0;
   text-align: center;
-  width: 100%;
+  width: calc(100% + 32px);   /* 100% plus both left & right sidebar padding */
+  margin-left: -16px;         /* negative of sidebar's left padding */
+  margin-right: -16px;        /* negative of sidebar's right padding */
   box-sizing: border-box;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+/* Sidebar content wrapper for mobile toggle */
+.sidebar-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar nav ul {
@@ -175,6 +188,38 @@ hr {
     border-right: none;
     box-shadow: none;
     justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 0;
+  }
+  .sidebar h1 {
+    margin-bottom: 0.5em;
+  }
+  .sidebar-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #191919;
+    cursor: pointer;
+    margin: 0 0 1em 0;
+    padding: 0.2em 0.5em;
+    align-self: flex-end;
+    z-index: 11;
+  }
+  .sidebar-content {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-top: 2px solid #d1cfc7;
+    width: 100%;
+    padding-bottom: 1em;
+    box-shadow: 0 2px 12px #e1dfdb22;
+    border-radius: 0 0 18px 18px;
+    margin: 0;
+    position: static; /* or just remove */
+  }
+  .sidebar-content.open {
+    display: flex;
   }
   .main-content {
     margin-left: 0;
@@ -185,4 +230,209 @@ hr {
     padding: 20px 8px;
     width: 100%;
   }
+  
+  #blog-search {
+    font-family: 'IBM Plex Mono', 'Fira Mono', 'Menlo', 'Consolas', monospace !important;
+    font-size: 1em !important;
+    line-height: 1.2 !important;
+    padding: 0.18em 0.7em !important;
+    min-height: 0 !important;
+    height: 2.2em !important;
+    max-height: 2.2em !important;
+    width: 95% !important;
+    box-sizing: border-box !important;
+    border-radius: 5px !important;
+    display: block !important;
+    resize: none !important;
+  }
+  
+
+  .blog-controls {
+    padding: 0.6em 0.5em;
+    flex-direction: column;
+    gap: 0.7em;
+  }
+  .blog-index { max-width: 99vw; }
+  .blog-card { padding: 1em 0.6em 1em 0.8em; }
+  .blog-index h1 { font-size: 2em; }
+  .blog-controls { flex-direction: column; gap: 0.7em; }
+}
+
+/* Blog index: Reddit/Medium-inspired card and filter look */
+.blog-index {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 2em 0 3em 0;
+}
+
+.blog-index h1 {
+  letter-spacing: 3px;
+  font-size: 2.5em;
+  background: #fff;
+  padding: 0.6em 1.2em 0.4em 0.4em;
+  border-radius: 9px;
+  border-left: 8px solid #d1cfc7;
+  margin-bottom: 1.2em;
+  box-shadow: 0 2px 16px #e1dfdb11;
+}
+
+.blog-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: stretch;
+  margin-bottom: 1.5em;
+  justify-content: space-between;
+  background: #f8f6f2;
+  border-radius: 12px;
+  padding: 1em 1.2em;
+  box-shadow: 0 1px 7px #e1dfdb22;
+}
+
+#blog-search {
+  flex: 1 1 240px;
+  padding: 0.7em 1.1em;
+  font-size: 1.08em;
+  border: 2px solid #d1cfc7;
+  border-radius: 7px;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #d1cfc73a;
+}
+
+#blog-search {
+  font-family: 'IBM Plex Mono', 'Fira Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  min-height: unset;
+  box-sizing: border-box;
+}
+
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  align-items: center;
+  margin-top: 0.6em;
+}
+
+.tag-filter {
+  padding: 0.42em 1.1em 0.42em 1.1em;
+  border-radius: 999px;
+  font-size: 1em;
+  cursor: pointer;
+  background: #f4f2ec;
+  border: 2px solid #d1cfc7;
+  color: #805ad5;
+  transition: all 0.18s;
+  user-select: none;
+  font-family: inherit;
+  font-weight: 500;
+  margin-bottom: 0.16em;
+  box-shadow: 0 1px 2px #eee8;
+}
+.tag-filter.active, .tag-filter:hover {
+  background: #805ad5;
+  color: #fff;
+  border-color: #805ad5;
+  font-weight: bold;
+  box-shadow: 0 2px 8px #805ad522;
+}
+
+/* Blog card style */
+#blog-list {
+  margin-top: 0.5em;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 16px #e1dfdb33;
+  margin-bottom: 1.4em;
+  padding: 1.2em 1.2em 1.2em 1.6em;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.18s, border 0.18s;
+  border: 2px solid #f2f1ed;
+  position: relative;
+}
+.blog-card:hover {
+  border: 2px solid #805ad5;
+  box-shadow: 0 6px 28px #805ad524;
+}
+
+.blog-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18em;
+}
+
+.blog-title {
+  font-size: 1.37em;
+  color: #191919;
+  font-weight: 700;
+  margin-bottom: 0.18em;
+  margin-top: 0.16em;
+  text-decoration: none;
+  transition: color 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.blog-title:hover {
+  color: #805ad5;
+  text-decoration: underline;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.2em;
+  font-size: 0.97em;
+}
+
+.blog-date {
+  color: #b8b6a8;
+  background: #f8f6f2;
+  border-radius: 7px;
+  padding: 0.1em 0.7em;
+  font-size: 0.98em;
+  margin-right: 0.5em;
+}
+
+.blog-tags {
+  display: flex;
+  gap: 0.4em;
+  flex-wrap: wrap;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.18em 0.7em;
+  border-radius: 999px;
+  font-size: 0.93em;
+  font-weight: 500;
+  background: #f4f2ec;
+  border: 1.5px solid #d1cfc7;
+  color: #805ad5;
+  text-transform: capitalize;
+  letter-spacing: 0.4px;
+  margin-right: 0.1em;
+}
+.tag-research { background: #d5e2ff; color: #2c5282; border-color: #b3c7e6; }
+.tag-tutorial { background: #e4ffd9; color: #276749; border-color: #b7e4b1; }
+.tag-off-topic { background: #fff4d6; color: #a17c4b; border-color: #eedfba; }
+.tag-physics { background: #ffe1e1; color: #c53030; border-color: #eabcbc; }
+.tag-math { background: #e9e6ff; color: #6b21a8; border-color: #cabffd; }
+.tag-computer-science { background: #cfe8fc; color: #0a2540; border-color: #97c4ec; }
+.tag-tips { background: #f6e6ff; color: #6f239c; border-color: #e6d0f7; }
+
+.blog-excerpt {
+  font-size: 1.03em;
+  color: #585858;
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+  line-height: 1.6;
+  font-family: 'IBM Plex Mono', 'Fira Mono', 'Menlo', 'Consolas', monospace;
 }
