@@ -10,4 +10,6 @@ Welcome to my electronics lab on the web!
 I'm an electronics enthusiast passionate about breadboards, oscilloscopes, soldering stations, and creative circuit design.  
 Here you'll find my latest projects, technical blogs, and ways to connect with me.
 
-Explore my [Blogs](/blogs.html) and [Projects](/projects.html)!
+---
+
+Explore my [Blogs](/blogs.html) and [Projects](/projects.html), or learn more on the [About](/about/) page.

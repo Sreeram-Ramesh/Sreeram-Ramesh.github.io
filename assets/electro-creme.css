@@ -436,3 +436,119 @@ hr {
   line-height: 1.6;
   font-family: 'IBM Plex Mono', 'Fira Mono', 'Menlo', 'Consolas', monospace;
 }
+
+/* Projects page */
+.projects-index {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 2em 0 3em 0;
+}
+
+.project-controls {
+  margin-bottom: 1.5em;
+}
+
+.project-controls input[type="text"] {
+  width: 100%;
+  padding: 0.7em 1.1em;
+  font-size: 1em;
+  font-family: 'IBM Plex Mono', 'Fira Mono', 'Menlo', 'Consolas', monospace;
+  border: 2px solid #d1cfc7;
+  border-radius: 7px;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #d1cfc73a;
+  box-sizing: border-box;
+}
+
+.project-controls input[type="text"]:focus {
+  border-color: #805ad5;
+  box-shadow: 0 2px 8px #805ad522;
+}
+
+#project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-item {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 16px #e1dfdb33;
+  margin-bottom: 1em;
+  padding: 0.9em 1.2em 0.9em 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.18s, border 0.18s;
+  border: 2px solid #f2f1ed;
+}
+
+.project-item:hover {
+  border: 2px solid #805ad5;
+  box-shadow: 0 6px 28px #805ad524;
+}
+
+.project-item a {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #191919;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.project-item a:hover {
+  color: #805ad5;
+  text-decoration: underline;
+}
+
+.project-year {
+  color: #b8b6a8;
+  background: #f8f6f2;
+  border-radius: 7px;
+  padding: 0.1em 0.7em;
+  font-size: 0.95em;
+  flex-shrink: 0;
+  margin-left: 1em;
+}
+
+/* 404 page */
+.not-found-container {
+  max-width: 600px;
+  margin: 4em auto;
+  text-align: center;
+}
+
+.not-found-container h1 {
+  font-size: 4em;
+  margin-bottom: 0.2em;
+  border-left: none;
+  background: none;
+  letter-spacing: 4px;
+  display: inline-block;
+  width: auto;
+  padding: 0.2em 0.5em;
+}
+
+@media (max-width: 700px) {
+  .project-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3em;
+  }
+  .project-year {
+    margin-left: 0;
+  }
+}
+
+.no-results-msg {
+  color: #805ad5;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
