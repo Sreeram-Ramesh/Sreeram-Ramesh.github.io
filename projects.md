@@ -5,17 +5,34 @@ layout: default
 
 # Projects
 
-<form id="projects-search-form" action="/projects.html" method="get">
-  <input type="search" id="projects-search" name="q" placeholder="Search projects..." style="width: 60%; padding: 0.4em; font-size: 1em; border: 1px solid #d1cfc7; border-radius: 4px;" />
-  <button type="submit" style="padding: 0.4em 1.2em; margin-left: 0.5em; background: #805ad5; color: #fff; border: none; border-radius: 4px; font-family: inherit;">Search</button>
-</form>
-
-<!-- Projects list here -->
-<ul>
-  {% for project in site.data.projects %}
-    <li>
+<div class="projects-index">
+  <div class="project-controls">
+    <input type="text" id="projects-search" placeholder="Search projects..." />
+  </div>
+  <ul id="project-list">
+    {% for project in site.data.projects %}
+    <li class="project-item" data-name="{{ project.name | downcase }}">
       <a href="{{ project.url }}">{{ project.name }}</a>
-      <span style="color:#b8b6a8;">({{ project.year }})</span>
+      <span class="project-year">({{ project.year }})</span>
     </li>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+  <div id="no-project-results" class="no-results-msg hidden">No projects found.</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var search = document.getElementById('projects-search');
+    var items = document.querySelectorAll('.project-item');
+    var noResults = document.getElementById('no-project-results');
+    search.addEventListener('input', function() {
+      var q = search.value.toLowerCase();
+      var any = false;
+      items.forEach(function(item) {
+        var match = item.getAttribute('data-name').includes(q);
+        item.classList.toggle('hidden', !match);
+        if (match) any = true;
+      });
+      noResults.classList.toggle('hidden', any);
+    });
+  });
+</script>
